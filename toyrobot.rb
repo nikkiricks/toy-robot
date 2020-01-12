@@ -7,15 +7,15 @@ class Toyrobot
   end
 
   def get_x
-    @x = @placement.split[1].chars[0].to_i
+    @x = @placement.split[0].chars[0].to_i
   end
 
   def get_y
-    @y = @placement.split[1].chars[2].to_i
+    @y = @placement.split[0].chars[2].to_i
   end
 
   def get_facing
-    @facing = @placement[10..14].chomp
+    @facing = @placement[4..8].chomp
   end
   
   def input
@@ -93,6 +93,10 @@ class Toyrobot
 
   def boundary_error_message
     puts "oops, don't fall off the grid, try a different move"
+  end
+
+  def bark
+    "Woof!"
   end
 
 end
