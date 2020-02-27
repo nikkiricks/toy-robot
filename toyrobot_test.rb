@@ -1,7 +1,11 @@
-require 'pry'
+require 'minitest/autorun'
 require_relative 'Toyrobot'
+require 'pry'
 
-puts "Enter placement and direction ex. PLACE 0,0,NORTH"
-placement = gets
-new_game = Toyrobot.new(placement)
-new_game.input
+class ToyrobotTest < Minitest::Test
+
+  def test_customer_input_for_24_cents
+    # skip
+    assert_equal [["1 * 20 cent coins\n"], ["2 * 2 cent coins\n"]], MoneyChanger.new(24).make_change
+  end
+end

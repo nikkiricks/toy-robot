@@ -15,7 +15,7 @@ class Toyrobot
   end
 
   def get_facing
-    @facing = @placement[4..8].chomp
+    @facing = @placement[4..8]
   end
   
   def input
@@ -94,9 +94,4 @@ class Toyrobot
   def boundary_error_message
     puts "oops, don't fall off the grid, try a different move"
   end
-
-  def bark
-    "Woof!"
-  end
-
 end
